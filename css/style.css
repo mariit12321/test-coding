@@ -1,1 +1,216 @@
+/* 共通パーツ */
+html {
+  font-size: 100%;
+}
+body{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+a:hover{
+  opacity: 0.7;
+}
 
+.sp{
+  display: none;
+}
+
+/* タイトル部分 */
+.header{
+  text-align: center;
+  padding-top: 80px;
+  margin-bottom: 48px;
+}
+
+.title{
+  display: inline-block;
+  font-size: 48px;
+  font-weight: 700;
+  border-bottom: 4px solid #000000;
+}
+
+/* メインコンテンツ */
+.container{
+  max-width: 1120px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.detail{
+  display: flex;
+  align-items: center;
+}
+
+.detail-img{
+  width: 50%;
+  margin-right: 40px;
+  object-fit: cover;
+}
+
+.detail-wrap{
+  width: 50%;
+}
+
+.detail-title{
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.detail-text{
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+.detail.reverse{
+  flex-direction: row-reverse;
+  margin-top: 80px;
+}
+
+.detail-img.reverse{
+  margin: 0 0 0 40px;
+}
+
+.btn-wrap{
+  margin: 80px 0;
+  text-align: center;
+}
+
+.btn{
+  display: inline-block;
+  padding: 16px 80px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+/* お問い合わせ */
+.contact{
+  text-align: center;
+  background-image: url("https://github.com/mariit12321/test-coding/blob/f9450a7971f897ef996d96eecf3f8df817135422/img/contact.png?raw=true");
+  background-size: cover;
+  padding: 80px 0;
+  color: #FFFFFF;
+  position: relative;
+}
+
+.contact::after{
+  content: '';
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.contact .container{
+  position: relative;
+  z-index: 10;
+}
+
+.contact-title{
+  border-bottom: 4px solid #FFFFFF;
+  margin-bottom: 40px;
+}
+
+.contact-text{
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+}
+
+.contact-btn-wrap{
+  margin: 40px 0 0 0;
+}
+
+.contact-btn{
+  display: inline-block;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* スマホ表示（ブレイクポイント：768px） */
+@media screen and (max-width: 768px){
+  .sp{
+    display: block;
+  }
+
+  .pc{
+    display: none;
+  }
+
+  .header{
+    padding-top: 50px;
+  }
+  
+  .title{
+    font-size: 32px;
+  }
+  
+  .container{
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .detail{
+    flex-direction: column;
+  }
+  
+  .detail-img{
+    width: 100%;
+    margin: 0 0 24px 0;
+    order: 2;
+  }
+
+  .detail-wrap{
+    display: contents;
+    width: 100%;
+  }
+  
+  .detail-title{
+    font-size: 20px;
+    line-height: 30px;
+    order: 1;
+  }
+
+  .detail-text{
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 400;
+    order: 3;
+  }
+  
+  .detail.reverse{
+    flex-direction: column;
+  }
+  
+  .detail-img.reverse{
+    margin: 0 0 24px 0;
+  }
+
+  .btn-wrap{
+    margin: 40px 0 50px 0;
+  }
+  
+  .btn{
+    display: block;
+    padding: 16px 0;
+  }
+  
+  .contact{
+    padding: 50px 0;
+  }
+
+  .contact-btn-wrap{
+    margin: 40px 0 0 0;
+  }
+  
+  .contact-btn{
+    display: block;
+  }
+}
